@@ -1,29 +1,41 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import logoLegacy from '../public/logo_legacy_2.png'
-import styled from 'styled-components'
-import Image from 'next/image'
+import MainPage from "../src/components/MainPage";
+import AboutPage from "../src/components/AboutPage";
+import { NextPage } from "next";
+import axios from "axios";
+import api from "../src/utils/backend";
+
+interface Items {
+  items : {
+    about: {
+      about_text: string,
+      _id?: string
+    }
+    socialMedias: {
+      wpp_link: string,
+      insta_link: string,
+      gmail_link: string
+    }
+  }
 
 
-const ContentImg = styled.div`
-  width: 60%;
-  margin: 0 auto;
+}
 
-`
-const Filter = styled.div`
-  background-image: linear-gradient(180deg, transparent, rgba(35, 35, 35, 0.68) 50.83%, #141414 100%);
-  height: 100vh;
-`
-
-const Home: NextPage = () => {
+const Home: NextPage<Items> = ({ items }) => {
   return (
-    <Filter>
-      <ContentImg>
-        <Image src={logoLegacy} alt="Picture of the author" />
-      </ContentImg>
-    </Filter>
+      <>
+        <MainPage socialMedias={items.socialMedias}/>
+        <AboutPage text={items.about.about_text}/>
+      </>
+
   )
+}
+
+
+Home.getInitialProps = async ({ req }) => {
+  const res = await api.get('firstPage');
+  const items = await res.data;
+
+  return { items }
 }
 
 export default Home

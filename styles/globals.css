@@ -2,19 +2,21 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-image: url('../public/larisa-birta-unsplash\ 1.png');
-
+/* background-image: linear-gradient(0deg , transparent, rgba(35, 35, 35, 0.68) 50.83%, #141414 100%); */
+  /* background-image: linear-gradient(0deg , transparent, rgba(35, 35, 35, 0.68) 50.83%, #141414 100%),
+  url('../public/larisa-birta-unsplash\ 1.png'); */
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
   background-size: cover;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: century-gothic, sans-serif;
 }
+
 
 img {
   max-width: 100%;
   display: block;
 } 
-
+/*url('../public/larisa-birta-unsplash\ 1.png')*/
 
 a {
   color: inherit;
@@ -23,4 +25,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #3f3f3f;
+}
+
+body::-webkit-scrollbar-track {
+  background: #000000;
+}
+body::-webkit-scrollbar-track-piece {
+  background: #000000;
+}
+body::-webkit-scrollbar-thumb {
+  background: #a1a1a1;
+  border-radius: 5px;
+}
+
+
+.form-comment textarea::-webkit-resizer {
+  border: 1px #860000 dashed;
 }
