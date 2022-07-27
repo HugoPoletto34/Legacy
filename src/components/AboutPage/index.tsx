@@ -1,51 +1,51 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import imgAbout from '../../../public/image_about.png'
+import imgAbout from '../../../public/SamuelPiano.jpg'
 import styled from 'styled-components'
 import Image from 'next/image'
 import WidgetsSocialMedia from '../WidgetsSocialMedia'
 import { Typography } from '@mui/material'
 
+
 const ContainerImage = styled.div`
-    margin: auto 0;
+    
 
 `
 
 const Container = styled.div`
+  
   padding-top: 115px;
-  height: 100vh;
-  display: flex;
-  flex-direction: row;
-  .container-image {
-    width: 30%;
-    
-  }
+
 
   .text-about {
-    width: 90%;
-    margin: auto 76px;
-    line-height: 38,43px;
+
+    padding: 10px;
   }
+
+
 
 `
 
 export default function AboutPage({text}) {
   return (
     <Container id='about_page'>
-      <ContainerImage className='container-image'>
-        <Image src={imgAbout} alt="Picture of the author" />
-      </ContainerImage>
+      
       <div className='text-about'>
-        <Typography fontFamily={"century-gothic"}  variant="body1" component="h3" fontSize={48.77} style={{marginBottom: 62}}>
+        
+        <Typography fontFamily={"century-gothic"}  variant="h3" component="h3"  style={{margin: 10}}>
           Sobre
         </Typography>
-        <Typography fontFamily={"century-gothic"} variant="body1" component="p" fontSize={24}>
+        <ContainerImage className='container-image'>
+        <Image src={imgAbout} alt="Picture of the author" />
+      </ContainerImage>
+        <Typography fontFamily={"century-gothic"} variant="body2" component="p" >
           {text}
         </Typography>
       </div>
 
       
     </Container>
+
   )
 }

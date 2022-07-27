@@ -3,6 +3,9 @@ import AboutPage from "../src/components/AboutPage";
 import { NextPage } from "next";
 import axios from "axios";
 import api from "../src/utils/backend";
+import PhotosPage from "../src/components/PhotosPage";
+import fs from 'fs'
+import path from 'path'
 
 interface Items {
   items : {
@@ -17,7 +20,6 @@ interface Items {
     }
   }
 
-
 }
 
 const Home: NextPage<Items> = ({ items }) => {
@@ -25,6 +27,7 @@ const Home: NextPage<Items> = ({ items }) => {
       <>
         <MainPage socialMedias={items.socialMedias}/>
         <AboutPage text={items.about.about_text}/>
+        <PhotosPage />
       </>
 
   )
@@ -34,6 +37,7 @@ const Home: NextPage<Items> = ({ items }) => {
 Home.getInitialProps = async ({ req }) => {
   const res = await api.get('firstPage');
   const items = await res.data;
+
 
   return { items }
 }
