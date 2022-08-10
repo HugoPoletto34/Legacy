@@ -8,8 +8,6 @@ import { Typography } from "@mui/material";
 
 const Container = styled.div`
   
-  padding-top: 100px;
-  height: 100vh;
 
   .text-about {
     line-height: 38,43px;
@@ -24,7 +22,8 @@ const Container = styled.div`
                        
 
 
-export default function PhotosPage() {
+export default function PhotosPage({ photos }) {
+  (photos)
   return (
     <Container id='photos_page'>
       <Typography fontFamily={"century-gothic"}  variant="h3" component="h3"  style={{margin: 10}}>
@@ -83,18 +82,16 @@ export default function PhotosPage() {
       slidesToSlide={1}
       swipeable
     >
-      <div>
-        <img src={'Images/_MG_3555.jpg'} />
-      </div>
-      <div>
-        <img src={'Images/_MG_3556.jpg'} />
-      </div>
-      <div>
-        <img src={'Images/_MG_3557.jpg'} />
-      </div>
-      <div>
-        <img src={'Images/_MG_3558.jpg'} />
-      </div>
+      
+        {photos.map((photo) => (
+          <div key={photo.photo_url}>
+                <img src={photo.photo_url}
+                style={{width: 500, maxWidth: '100%', height: 'auto'}}
+                title="Click for the larger version." />
+          </div>
+
+        ))}
+
     </Carousel>
   </Container>
   )

@@ -15,10 +15,11 @@ export default async function handler(
   let endpoints = [
     'about',
     'socialMedias',
+    'photos',
   ];
   axios.all(endpoints.map((endpoint) => api.get(endpoint))).then(
-    axios.spread(({data: about}, {data:socialMedias}) => {
-      res.status(200).json({ about, socialMedias });
+    axios.spread(({data: about}, {data:socialMedias}, {data: photos}) => {
+      res.status(200).json({ about, socialMedias, photos });
     })
   ).catch(error => {
     res.json(error);

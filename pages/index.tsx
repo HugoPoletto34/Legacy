@@ -6,6 +6,8 @@ import api from "../src/utils/backend";
 import PhotosPage from "../src/components/PhotosPage";
 import fs from 'fs'
 import path from 'path'
+import CronogramaPage from "../src/components/CronogramaPage";
+import VideosPage from "../src/components/VideosPage";
 
 interface Items {
   items : {
@@ -18,16 +20,22 @@ interface Items {
       insta_link: string,
       gmail_link: string
     }
+    photos: {
+      photo_url: string,
+    }
   }
 
 }
 
 const Home: NextPage<Items> = ({ items }) => {
+  // (items)
   return (
       <>
         <MainPage socialMedias={items.socialMedias}/>
-        <AboutPage text={items.about.about_text}/>
-        <PhotosPage />
+        {/* <AboutPage text={items.about.about_text}/> */}
+        <VideosPage />
+        <CronogramaPage />
+        <PhotosPage photos={items.photos} />
       </>
 
   )
