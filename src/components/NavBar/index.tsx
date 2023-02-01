@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import React from 'react'
 import Image from 'next/image'
-import { Box, IconButton, Link, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
+import { Box, Button, IconButton, Link, Menu, MenuItem, Modal, Toolbar, Typography } from '@mui/material'
 import logoLegacy from '../../../public/legacy_logo.png'
-import AdbIcon from '@mui/icons-material/Adb';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const Cont = styled.div`
   position: fixed;
@@ -14,13 +14,15 @@ const Cont = styled.div`
   
 
   .ativaCor {
-    transition: all ease 0.3s;
+    height: 80px;
+    transition: all ease 0.6s;
     background-image: linear-gradient(0deg , transparent, rgba(0, 0, 0, 0.68) 20.83%, #000000 70%);
   }
 
   .inativaCor {
+    height: 80px;
     background-color: transparent;
-    transition: all ease 0.3s;
+    transition: all ease 0.6s;
   }
 `
 
@@ -38,68 +40,72 @@ export default function NavBar({ colorNav }) {
   };
 
   const pages = [
-    {label: 'Discografia', href: '#videos_page'}, 
-    {label: 'Agenda 2022', href: '#cronograma_page'}, 
-    {label: 'Fotos', href: '#photos_page'}, 
+    {label: 'SOBRE', href: '#about_page'}, 
+    {label: 'DISCOGRAFIA', href: '#videos_page'}, 
+    {label: 'AGENDA', href: '#cronograma_page'}, 
   ];
 
   return (
       <Cont>
         <div className={colorNav ? 'ativaCor' : 'inativaCor'}>
-          <Toolbar disableGutters>
+          <Toolbar disableGutters >
+          
             
+            <Modal
+            
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+              sx={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: "#020202a4"
+              }}
+              
+            >
+              <Box style={{  }} >
 
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                <Typography id="modal-modal-title">
+                  <IconButton
+                    size="large"
+                    aria-label="account of current user"
+                    aria-controls="menu-appbar"
+                    aria-haspopup="true"
+                    sx={{ mr: 0, position: 'absolute', top: 20, right: 3 }}
+                    onClick={handleCloseNavMenu}
+                  >
+                    <CloseIcon sx={{ color: 'white' }}/>
+                </IconButton>
+                </Typography>
+                <div id='modal-modal-description' >
+                  <div style={{ padding: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', listStyle: 'none', fontSize: 40, fontFamily:"brandon-grotesque,-apple-system,BlinkMacSystemFont,helvetica neue,Arial,noto sans,sans-serif,apple color emoji,segoe ui emoji,segoe ui symbol,noto color emoji" }}>
+                    {pages.map((page) => (
+                      <Link key={page.label} href={page.href} style={{ color: 'white', textDecoration: 'none', padding: '15px' }} onClick={handleCloseNavMenu}>
+                        {page.label}
+                      </Link>
+                      ))}
+                  </div>
+                  
+                </div>
+                
+              </Box>
+            </Modal>
+              <Link href="/" sx={{ m: '0 auto' }}>
+                <Image height={90} width={130} src={logoLegacy} alt="Picture of the author" />
+              </Link>
               <IconButton
                 size="large"
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
+                sx={{ mr: 0, position: 'absolute', top: 20, right: 3 }}
                 onClick={handleOpenNavMenu}
-                
               >
-                <MenuIcon color='primary'/>
+                <MenuIcon sx={{ color: 'white' }}/>
               </IconButton>
-              <Menu
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: 'bottom',
-                  horizontal: 'left',
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: 'top',
-                  horizontal: 'left',
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-                sx={{
-                  display: { xs: 'block', md: 'none' },
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem key={page.label} onClick={handleCloseNavMenu}>
-                    <Link href={page.href}>
-                      {page.label}
-                    </Link>
-                  </MenuItem>
-                ))}
-              </Menu>
-            </Box>
 
-            <Link href="/" sx={{
-                mr: 2,
-                display: { xs: 'flex', md: 'none' },
-                flexGrow: 1,
-                fontFamily: 'monospace',
-                fontWeight: 700,
-                letterSpacing: '.3rem',
-                color: 'inherit',
-                textDecoration: 'none',
-              }} >
-              <Image width={150} height={90} src={logoLegacy} alt="Picture of the author" />
-            </Link>
           
 
         </Toolbar>

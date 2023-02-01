@@ -23,7 +23,6 @@ const Container = styled.div`
 
 
 export default function PhotosPage({ photos }) {
-  (photos)
   return (
     <Container id='photos_page'>
       <Typography fontFamily={"century-gothic"}  variant="h3" component="h3"  style={{margin: 10}}>
@@ -85,7 +84,8 @@ export default function PhotosPage({ photos }) {
       
         {photos.map((photo) => (
           <div key={photo.photo_url}>
-                <img src={photo.photo_url}
+                <img src={photo.url}
+                key={photo.url}
                 style={{width: 500, maxWidth: '100%', height: 'auto'}}
                 title="Click for the larger version." />
           </div>

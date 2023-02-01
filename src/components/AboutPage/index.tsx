@@ -14,10 +14,6 @@ const ContainerImage = styled.div`
 `
 
 const Container = styled.div`
-  
-  padding-top: 115px;
-
-
   .text-about {
 
     padding: 10px;
@@ -28,6 +24,11 @@ const Container = styled.div`
 `
 
 export default function AboutPage({text}) {
+  function data() {
+    return {
+        valor: 'minha string com <b>bold</b>'
+    }
+}
   return (
     <Container id='about_page'>
       
@@ -39,8 +40,9 @@ export default function AboutPage({text}) {
         <ContainerImage className='container-image'>
         <Image src={imgAbout} alt="Picture of the author" />
       </ContainerImage>
-        <Typography fontFamily={"century-gothic"} variant="body2" component="p" >
-          {text}
+        <Typography fontFamily={"rubik,sans-serif"} fontSize="1.1rem" component="p" color="#384248" >
+        
+          <p dangerouslySetInnerHTML={{ __html: text }}></p>
         </Typography>
       </div>
 

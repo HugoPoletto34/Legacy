@@ -11,31 +11,32 @@ import VideosPage from "../src/components/VideosPage";
 
 interface Items {
   items : {
-    about: {
-      about_text: string,
-      _id?: string
-    }
+    aboutText: string,
     socialMedias: {
-      wpp_link: string,
-      insta_link: string,
-      gmail_link: string
-    }
+      spotUrl: string,
+      instaUrl: string,
+      ytUrl: string
+    },
     photos: {
-      photo_url: string,
-    }
+      url: string,
+    },
+    videosYT: {
+      url: string,
+    },
+    spotifyLegacy: string,
   }
 
 }
 
 const Home: NextPage<Items> = ({ items }) => {
-  // (items)
+  console.log(items)
   return (
       <>
         <MainPage socialMedias={items.socialMedias}/>
-        {/* <AboutPage text={items.about.about_text}/> */}
-        <VideosPage />
+        <AboutPage text={items.aboutText}/>
+        <VideosPage videosYT={items.videosYT} spotifyLegacy={items.spotifyLegacy}/>
         <CronogramaPage />
-        <PhotosPage photos={items.photos} />
+        {/* <PhotosPage photos={items.photos} /> */}
       </>
 
   )

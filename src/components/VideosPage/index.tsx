@@ -28,31 +28,29 @@ const Container = styled.div`
 
 `
 
-export default function VideosPage() {
+export default function VideosPage({videosYT, spotifyLegacy}) {
   return (
     <Container id='videos_page'>
       <Typography fontFamily={"century-gothic"}  variant="h3" component="h3"  style={{margin: 10}}>
           Discografia
       </Typography>
       <ContainerVideos>
-        <iframe   
-        height="300" 
-        src="https://www.youtube.com/embed/ZU3QU1umhMQ" 
-        title="YouTube video player" 
-        frameBorder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowFullScreen
-        ></iframe>
-        <iframe   
-        height="300"
-        src="https://www.youtube.com/embed/EYUOWX1qNmA" 
-        title="YouTube video player" 
-        frameBorder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowFullScreen
-        ></iframe>
+        {videosYT.map((video) => (
+          <iframe
+          key={video.url}
+          height="300" 
+          src={video.url} 
+          title="YouTube video player" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
+          ></iframe>)
+        )}
       </ContainerVideos>
-      <iframe style={{ marginTop: 5 }} src="https://open.spotify.com/embed/artist/0c38dMhgH8v5w3e4PiiLOO?utm_source=generator" width="100%" height="250px" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+     
+      <div>
+        <iframe style={{ marginTop: 5 }} src={spotifyLegacy} width="100%" height="250px" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+      </div>
     </Container>
 
   )
