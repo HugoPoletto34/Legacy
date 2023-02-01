@@ -29,13 +29,13 @@ export default function WidgetsSocialMedia({ socialMedias }) {
   return (
 
     <GroupSocialMedia className='socialMedias'>
-      <a href={socialMedias.yt_link}>
+      <a href={socialMedias.ytUrl}>
         <Image src={youtube} alt="Picture of the author" />
       </a>
-      <a href={socialMedias.insta_link}>
+      <a href={socialMedias.instaUrl}>
         <Image src={insta} alt="Picture of the author" />
       </a>
-      <a href={socialMedias.spot_link}>
+      <a href={socialMedias.spotUrl}>
         <Image src={spotify} alt="Picture of the author" />
       </a>
     </GroupSocialMedia>
