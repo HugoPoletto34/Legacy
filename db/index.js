@@ -4,9 +4,6 @@ export var db = {
   "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Por acreditarmos no poder da música e da arte em todas as suas vertentes nos apresentamos em Igrejas, hospitais, praças, asilos, presídios, casas de recuperações e onde mais vier o chamado para falar de Jesus, pois temos como alvo espalhar o evangelho a todos que precisam saber do amor de Cristo sem distinção. Além da função religiosa, cumprimos também com a missão de fomentar e desenvolver a música brasileira ao promover um espaço onde os músicos amadores ou graduados possam aprimorar os seus talentos e posteriormente usá-los em outros espaços além do Ministério Legacy.",
   photos: [
     {
-      url: "https://drive.google.com/uc?export=view&id=1Lgdq8EU-6AAoNLDC6Xb22fG14sTYckz8"
-    },
-    {
       url: "https://drive.google.com/uc?export=view&id=1s4U0rBr8FxS8IN3Iu3DJIaRc6QsScL05"
     },
     {

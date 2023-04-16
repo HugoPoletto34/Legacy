@@ -34,11 +34,11 @@ export default function PhotosPage({ photos }) {
       autoPlaySpeed={3000}
       centerMode={false}
       className=""
+      autoPlay={true}
       containerClass="container-with-dots"
       dotListClass=""
       draggable
       focusOnSelect={false}
-      infinite
       itemClass=""
       keyBoardControl
       minimumTouchDrag={80}
@@ -46,6 +46,7 @@ export default function PhotosPage({ photos }) {
       renderArrowsWhenDisabled={false}
       renderButtonGroupOutside={false}
       renderDotsOutside={false}
+      
       responsive={{
         desktop: {
           breakpoint: {
@@ -86,7 +87,7 @@ export default function PhotosPage({ photos }) {
           <div key={photo.photo_url}>
                 <img src={photo.url}
                 key={photo.url}
-                style={{width: 500, maxWidth: '100%', height: 'auto'}}
+                style={{height: 400, objectFit: 'cover'}}
                 title="Click for the larger version." />
           </div>
 

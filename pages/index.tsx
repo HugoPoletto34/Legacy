@@ -37,8 +37,8 @@ const Home: NextPage<Items> = ({ items }) => {
           <VideosPage videosYT={items.videosYT} spotifyLegacy={items.spotifyLegacy}/>
           
         </div>
-        {/* <CronogramaPage /> */}
-        {/* <PhotosPage photos={items.photos} /> */}
+        <CronogramaPage />
+        <PhotosPage photos={items.photos} />
       </>
 
   )
