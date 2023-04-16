@@ -13,6 +13,6 @@ export default async function handler(
     return {url : result};
   })
   // inverter array
-  videos.reverse();
+  // videos.reverse();
   res.status(200).json(videos)
 }
