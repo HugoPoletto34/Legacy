@@ -49,7 +49,7 @@ export default function VideosPage({videosYT, spotifyLegacy}) {
       </ContainerVideos>
      
       <div>
-        <iframe style={{ marginTop: 5 }} src={spotifyLegacy} width="100%" height="250px" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        <iframe style={{ marginTop: 5, marginBottom: 0 }} src={spotifyLegacy} width="100%" height="100px" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       </div>
     </Container>
 

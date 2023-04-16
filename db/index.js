@@ -36,8 +36,9 @@ export var db = {
   ],
   socialMedias: {
     instaUrl: "https://www.instagram.com/legacy_instrumental",
-    spotUrl: "https://open.spotify.com/artist/0c38dMhgH8v5w3e4PiiLOO?si=YiFuW62bTwSeYswz08KG0Q",
-    ytUrl: "https://www.youtube.com/channel/UCwWzUZACan_dNyt4BR53lKw"
+    spotUrl: "https://open.spotify.com/artist/0c38dMhgH8v5w3e4PiiLOO?si=nRgMeJITTXSJr9YKg9DpiA",
+    ytUrl: "https://www.youtube.com/channel/UCwWzUZACan_dNyt4BR53lKw",
+    vkUrl: "https://www.vakinha.com.br/vaquinha/ajudem-o-legacy-instrumental"
   },
   videosYT: [
     {

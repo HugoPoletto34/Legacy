@@ -29,13 +29,15 @@ interface Items {
 }
 
 const Home: NextPage<Items> = ({ items }) => {
-  console.log(items)
   return (
       <>
         <MainPage socialMedias={items.socialMedias}/>
-        <AboutPage text={items.aboutText}/>
-        <VideosPage videosYT={items.videosYT} spotifyLegacy={items.spotifyLegacy}/>
-        <CronogramaPage />
+        <div style={{ margin: '0 auto', width: '94vw' }}>
+          <AboutPage text={items.aboutText}/>
+          <VideosPage videosYT={items.videosYT} spotifyLegacy={items.spotifyLegacy}/>
+          
+        </div>
+        {/* <CronogramaPage /> */}
         {/* <PhotosPage photos={items.photos} /> */}
       </>
 
