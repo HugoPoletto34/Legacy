@@ -70,7 +70,7 @@ export default function WidgetsSocialMedia({ socialMedias }) {
         </a>
         <Typography fontFamily={"rubik,sans-serif"} fontSize="1.1rem" component="p" color="#ffffff"  >
           
-          Canal do YouTube
+          Instagram
         </Typography>
       </Trigger>
       <Trigger style={{ gap: 5 }}>
@@ -79,7 +79,7 @@ export default function WidgetsSocialMedia({ socialMedias }) {
         </a>
         <Typography fontFamily={"rubik,sans-serif"} fontSize="1.1rem" component="p" color="#ffffff"  >
           
-          Canal do YouTube
+          Spotify
         </Typography>
       </Trigger>
 
