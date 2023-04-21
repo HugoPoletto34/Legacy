@@ -8,6 +8,7 @@ import fs from 'fs'
 import path from 'path'
 import CronogramaPage from "../src/components/CronogramaPage";
 import VideosPage from "../src/components/VideosPage";
+import MembrosPage from "../src/components/MembrosPage";
 
 interface Items {
   items : {
@@ -34,11 +35,11 @@ const Home: NextPage<Items> = ({ items }) => {
         <MainPage socialMedias={items.socialMedias}/>
         <div style={{ margin: '0 auto', width: '94vw' }}>
           <AboutPage text={items.aboutText}/>
-          <VideosPage videosYT={items.videosYT} spotifyLegacy={items.spotifyLegacy}/>
-          
+          <VideosPage videosYT={items.videosYT} spotifyLegacy={items.spotifyLegacy}/>          
+          <MembrosPage/>
+          <CronogramaPage />
+          <PhotosPage photos={items.photos} />
         </div>
-        <CronogramaPage />
-        <PhotosPage photos={items.photos} />
       </>
 
   )

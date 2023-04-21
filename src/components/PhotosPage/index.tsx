@@ -31,8 +31,10 @@ export default function PhotosPage({ photos }) {
       <Carousel
       additionalTransfrom={0}
       arrows
-      autoPlaySpeed={3000}
+      autoPlaySpeed={10000}
       centerMode={false}
+      infinite={true}
+      
       className=""
       autoPlay={true}
       containerClass="container-with-dots"
