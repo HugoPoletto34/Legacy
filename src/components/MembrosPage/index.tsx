@@ -69,7 +69,7 @@ export default function MembrosPage({}) {
             Piano
           </Typography>
           <Divider/>
-          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"justify"}>
+          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
             Samuel Fillipe é um pianista excepcional e líder talentoso que traz uma grande energia e criatividade para o grupo.
           </Typography>
         </Content>
@@ -84,7 +84,7 @@ export default function MembrosPage({}) {
             Flauta Transversal
           </Typography>
           <Divider/>
-          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"justify"}>
+          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
           Hugo é um talentoso flautista que tem uma paixão pela música e especialmente pela flauta transversal.
           </Typography>
         </Content>
@@ -99,7 +99,7 @@ export default function MembrosPage({}) {
             Violoncelo
           </Typography>
           <Divider/>
-          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"justify"}>
+          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
             Yngrid é uma violoncelista talentosa e apaixonada que traz uma qualidade única e distinta para o som da banda.
           </Typography>
         </Content>
