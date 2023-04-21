@@ -78,9 +78,9 @@ export default function WidgetsSocialMedia({ socialMedias }) {
         <a href={socialMedias.vkUrl}>
           <Image src={vakinha} alt="Picture of the author" />
         </a>
-        <Typography fontFamily={"rubik,sans-serif"} fontSize="1.5rem" component="p" color="#ffffff" style={{ backgroundColor: "rgba(0, 0, 0, 0.418)", boxShadow: "2px 2px 8px rgba(0, 0, 0, 0.637)" }}  >
+        <Typography fontFamily={"rubik,sans-serif"} fontSize="1.2rem" component="p" color="#ffffff" style={{ backgroundColor: "rgba(0, 0, 0, 0.418)", boxShadow: "2px 2px 8px rgba(0, 0, 0, 0.637)" }}  >
           
-          Contribua!
+          Contribua para o nosso projeto!
         </Typography>
       </div>
     </GroupSocialMedia>

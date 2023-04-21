@@ -9,6 +9,7 @@ import path from 'path'
 import CronogramaPage from "../src/components/CronogramaPage";
 import VideosPage from "../src/components/VideosPage";
 import MembrosPage from "../src/components/MembrosPage";
+import ContatoPage from "../src/components/ContatoPage";
 
 interface Items {
   items : {
@@ -40,6 +41,7 @@ const Home: NextPage<Items> = ({ items }) => {
           <CronogramaPage />
           <PhotosPage photos={items.photos} />
         </div>
+        <ContatoPage />
       </>
 
   )

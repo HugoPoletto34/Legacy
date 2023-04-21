@@ -100,7 +100,7 @@ export default function NavBar({ colorNav }) {
                 aria-label="account of current user"
                 aria-controls="menu-appbar"
                 aria-haspopup="true"
-                sx={{ mr: 0, position: 'absolute', top: 20, right: 3, display: 'none' }}
+                sx={{ mr: 0, position: 'absolute', top: 20, left: 3}}
                 onClick={handleOpenNavMenu}
               >
                 <MenuIcon sx={{ color: 'white' }}/>
