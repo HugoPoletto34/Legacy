@@ -46,15 +46,7 @@ export default function WidgetsSocialMedia({ socialMedias }) {
 
     <GroupSocialMedia className='socialMedias'>
 
-      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center',  gap: 5 }}>
-        <a href={socialMedias.vkUrl}>
-          <Image src={vakinha} alt="Picture of the author" />
-        </a>
-        <Typography fontFamily={"rubik,sans-serif"} fontSize="1.1rem" component="p" color="#ffffff"  >
-          
-          Apoie-nos!
-        </Typography>
-      </div>
+
       <Trigger style={{ gap: 5 }}>
         <a href={socialMedias.ytUrl} >
           <Image src={youtube} alt="Picture of the author" />
@@ -82,7 +74,15 @@ export default function WidgetsSocialMedia({ socialMedias }) {
           Spotify
         </Typography>
       </Trigger>
-
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center',  gap: 5 }}>
+        <a href={socialMedias.vkUrl}>
+          <Image src={vakinha} alt="Picture of the author" />
+        </a>
+        <Typography fontFamily={"rubik,sans-serif"} fontSize="1.5rem" component="p" color="#ffffff" style={{ backgroundColor: "rgba(0, 0, 0, 0.418)", boxShadow: "2px 2px 8px rgba(0, 0, 0, 0.637)" }}  >
+          
+          Contribua!
+        </Typography>
+      </div>
     </GroupSocialMedia>
 
   )
