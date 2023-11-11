@@ -48,7 +48,7 @@ export default function CronogramaPage() {
   return (
     <Container id='cronograma_page'>
       <Typography fontFamily={"century-gothic"}  variant="h3" component="h3"  style={{margin: 10}}>
-          Agenda 2022
+          Agenda 2023
       </Typography>
 
       <TableContainer component={Paper}>
