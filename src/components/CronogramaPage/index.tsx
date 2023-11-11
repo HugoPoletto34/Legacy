@@ -77,7 +77,7 @@ export default function CronogramaPage() {
       </Table>
     </TableContainer>
     <Typography fontFamily={"century-gothic"}  variant="subtitle1" component="h5"  style={{margin: 10, color: 'gray', textAlign: 'right', fontSize: '10pt'}}>
-          última atualização: 05/08
+          última atualização: 10/11/2023
       </Typography>
   </Container>
   )
