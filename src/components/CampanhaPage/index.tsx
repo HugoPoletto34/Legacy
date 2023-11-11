@@ -71,11 +71,11 @@ export default function CampanhaPage() {
 
           <ul>
             <li><b>CONTRIBUIÇÃO DIRETA - PIX</b></li>
-            Chave PIX: <u>campanhalegacy@gmail.com</u><br />
+            Chave PIX: <u style={{ wordBreak: "break-word" }}>campanhalegacy@gmail.com</u><br />
             OBS: A doação constará no nome do tesoureiro responsável: <strong>Robson Wagner Silva</strong>
             <li><b>Vakinha</b></li>
-            <a href="https://www.vakinha.com.br/3515444">https://www.vakinha.com.br/3515444</a><br />
-            chave PIX: <u>3515444@vakinha.com.br</u>
+            <a href="https://www.vakinha.com.br/3515444" style={{ wordBreak: "break-word" }}>https://www.vakinha.com.br/3515444</a><br />
+            chave PIX: <u style={{ wordBreak: "break-word" }}>3515444@vakinha.com.br</u>
             <li><b>Repasse para um membro do Legacy</b></li>
             Nossos membros estao autorizados a receber as contribuições.
           </ul>
