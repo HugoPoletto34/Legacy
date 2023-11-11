@@ -116,7 +116,7 @@ const membros = [
   {
     "imagePath": EscaletaM,
     "name": "Luiza Araújo",
-    "instrument": "Cantora",
+    "instrument": "Escaleta",
     "frase": "Ter sempre um cântico no coração!!"
   },
   {
