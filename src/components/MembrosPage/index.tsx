@@ -90,7 +90,7 @@ const membros = [
   },
   {
     "imagePath": Cantor,
-    "name": "josé Maria",
+    "name": "José Maria",
     "instrument": "Cantor",
     "frase": "Música. Uma dádiva divina."
 
