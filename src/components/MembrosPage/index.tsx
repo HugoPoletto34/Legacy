@@ -16,7 +16,7 @@ import Paulo from '../../../public/Images/membros/Paulo.jpg'
 import Saxofone from '../../../public/Images/membros/Saxofone.jpg'
 import VanessaViolino from '../../../public/Images/membros/VanessaViolino.jpg'
 import saxofone2 from '../../../public/Images/membros/saxofone2.jpg'
-import Robson from '../../../public/Images/membros/robson.jpg'
+import Robson from '../../../public/Images/membros/Robson.jpg'
 import Image from 'next/dist/client/image'
 import 'react-multi-carousel/lib/styles.css';
 
