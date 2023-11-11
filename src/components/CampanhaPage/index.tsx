@@ -92,8 +92,8 @@ export default function CampanhaPage() {
           transparência e para agradecer aos doadores que tanto nos
           ajudaram. Como parte do nosso agradecimento os doadores
           receberão uma homenagem em forma de recital, onde
-          também será lançado nosso primeiro álbum: <b>"ECOS DE UM
-          LEGADO"</b> e receberão um <b>ingresso gratuito</b> para assistir
+          também será lançado nosso primeiro álbum: <b>ECOS DE UM
+          LEGADO</b> e receberão um <b>ingresso gratuito</b> para assistir
           este concerto incrível que está sendo preparado com muito
           carinho, dedicação e empenho por nós.
         </Typography>

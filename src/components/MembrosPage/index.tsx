@@ -234,7 +234,7 @@ export default function MembrosPage({}) {
     >
       
       {membros.map((membro) => (
-        <Content >
+        <Content key={membro.name}>
         <ImageContainer>
           <StyledImage src={membro.imagePath} width={200} height={200}/>
         </ImageContainer>
