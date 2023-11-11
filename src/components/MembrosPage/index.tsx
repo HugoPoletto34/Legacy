@@ -4,7 +4,19 @@ import React from 'react'
 import styled from 'styled-components'
 import HugoImage from '../../../public/Images/membros/Hugo.jpg'
 import SamuelImage from '../../../public/Images/membros/Samuel.jpg'
-import YngridImage from '../../../public/Images/membros/Yngrid.jpg'
+import Cantor from '../../../public/Images/membros/Cantor.jpg'
+import CintiaCanto from '../../../public/Images/membros/CintiaCanto.jpg'
+import EscaletaM from '../../../public/Images/membros/EscaletaM.jpg'
+import GabrielPiano from '../../../public/Images/membros/GabrielPiano.jpg'
+import IrmaSamuel from '../../../public/Images/membros/IrmaSamuel.jpg'
+import JosephCanto from '../../../public/Images/membros/JosephCanto.jpg'
+import JulianeCanto from '../../../public/Images/membros/JulianeCanto.jpg'
+import NathaliaFlauta from '../../../public/Images/membros/NathaliaFlauta.jpg'
+import Paulo from '../../../public/Images/membros/Paulo.jpg'
+import Saxofone from '../../../public/Images/membros/Saxofone.jpg'
+import VanessaViolino from '../../../public/Images/membros/VanessaViolino.jpg'
+import saxofone2 from '../../../public/Images/membros/saxofone2.jpg'
+import Robson from '../../../public/Images/membros/robson.jpg'
 import Image from 'next/dist/client/image'
 import 'react-multi-carousel/lib/styles.css';
 
@@ -62,6 +74,100 @@ const ImageContainer = styled.div`
   margin: 10px;
 
 `
+
+const membros = [
+  {
+    "imagePath": HugoImage,
+    "name": "Hugo Poletto",
+    "instrument": "Flauta Transversal",
+    "frase": "Hugo é um talentoso flautista que tem uma paixão pela música e especialmente pela flauta transversal.",
+  },
+  {
+    "imagePath": SamuelImage,
+    "name": "Samuel Fillipe",
+    "instrument": "Piano",
+    "frase": "Samuel Filipe é um pianista excepcional e líder talentoso que traz uma grande energia e criatividade para o grupo.",
+  },
+  {
+    "imagePath": Cantor,
+    "name": "josé Maria",
+    "instrument": "Cantor",
+    "frase": "Música. Uma dádiva divina."
+
+  },
+  {
+    "imagePath": VanessaViolino,
+    "name": "Vanessa Barros",
+    "instrument": "Violino",
+    "frase": "Acredita no poder que a música tem de transformar  sentimentos e eternizar momentos."
+  },
+  {
+    "imagePath": NathaliaFlauta,
+    "name": "Nathalia Thais",
+    "instrument": "Flauta transversal",
+    "frase": "A Nathália cresceu participando de projetos de música e desenvolvendo seu talento para a obra do Senhor."
+  },
+  {
+    "imagePath": CintiaCanto,
+    "name": "Cintia Neves",
+    "instrument": "Cantora",
+    "frase": "Através da música posso me expressar e compartilhar o maior amor que o mundo já conheceu, Jesus"
+  },
+  {
+    "imagePath": EscaletaM,
+    "name": "Luiza Araújo",
+    "instrument": "Cantora",
+    "frase": "Ter sempre um cântico no coração!!"
+  },
+  {
+    "imagePath": GabrielPiano,
+    "name": "Gabriel Candido",
+    "instrument": "Piano",
+    "frase": "Gabriel é um jovem tecladista que a cada dia tem aprendido mais a desenvolver o seu talento e amor pela música."
+  },
+  {
+    "imagePath": Paulo,
+    "name": "Paulo Souza",
+    "instrument": "Saxofone",
+    "frase": "Aprendendo sempre, simples assim."
+  },
+  {
+    "imagePath": IrmaSamuel,
+    "name": "Tarcila Adelina",
+    "instrument": "Cantora",
+    "frase": "Entendo louvor a Deus como uma forma de nos aproximarem DEle, e isso não tem relação com quão belo soe para pessoas, mas, sim com a entrega que fazemos a ELE"
+  },
+  {
+    "imagePath": JosephCanto,
+    "name": "Joseph Patrick",
+    "instrument": "Cantor",
+    "frase": "Joseph é um rapaz que ama música, estar com amigos e adorar a Deus"
+  },
+  {
+    "imagePath": JulianeCanto,
+    "name": "Juliane Aline",
+    "instrument": "Cantora",
+    "frase": "Não importa a minha capacidade e sim a minha resposta a capacidade de Deus"
+  },
+  {
+    "imagePath": saxofone2,
+    "name": "Rossi Soares",
+    "instrument": "Saxofone",
+    "frase": "Não são apenas ruídos, são sopros que vibram almas."
+  },
+  {
+    "imagePath": Saxofone,
+    "name": "Dalton Ávila",
+    "instrument": "Saxofone",
+    "frase": "Dalton é um saxofonista que usa seus talentos pra Louvar ao Senhor."
+  },
+  {
+    "imagePath": Robson,
+    "name": "Robson Wagner",
+    "instrument": "Saxofone",
+    "frase": "Enquanto existir um fôlego em mim, sempre haverá um canto para Ti."
+  },
+]
 
 export default function MembrosPage({}) {
   return (
@@ -127,51 +233,23 @@ export default function MembrosPage({}) {
       swipeable
     >
       
-      <Content >
-          <ImageContainer>
-            <StyledImage src={SamuelImage} width={200} height={200}/>
-          </ImageContainer>
-          <Typography fontFamily={"century-gothic"}  variant="h5" component="h5" textAlign={"center"}  style={{marginBottom: 0}}>
-            Samuel Fillipe
-          </Typography>
-          <Typography fontFamily={"century-gothic"}  variant="subtitle1" component="h6"  textAlign={"center"} style={{marginBottom: 2}}>
-            Piano
-          </Typography>
-          <Divider/>
-          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
-            Samuel Filipe é um pianista excepcional e líder talentoso que traz uma grande energia e criatividade para o grupo.
-          </Typography>
-        </Content>
-        <Content>
-          <ImageContainer>
-            <StyledImage src={HugoImage} width={200} height={200} />
-          </ImageContainer>
-          <Typography fontFamily={"century-gothic"}  variant="h5" component="h5" textAlign={"center"}  style={{marginBottom: 0}}>
-            Hugo Poletto
-          </Typography>
-          <Typography fontFamily={"century-gothic"}  variant="subtitle1" component="h6"  textAlign={"center"} style={{marginBottom: 2}}>
-            Flauta Transversal
-          </Typography>
-          <Divider/>
-          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
-          Hugo é um talentoso flautista que tem uma paixão pela música e especialmente pela flauta transversal.
-          </Typography>
-        </Content>
-        <Content>
-          <ImageContainer>
-            <StyledImage src={YngridImage} width={200} height={200}/>
-          </ImageContainer>
-          <Typography fontFamily={"century-gothic"}  variant="h5" component="h5" textAlign={"center"}  style={{marginBottom: 0}}>
-            Yngrid Rebeca
-          </Typography>
-          <Typography fontFamily={"century-gothic"}  variant="subtitle1" component="h6"  textAlign={"center"} style={{marginBottom: 2}}>
-            Violoncelo
-          </Typography>
-          <Divider/>
-          <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
-            Yngrid é uma violoncelista talentosa e apaixonada que traz uma qualidade única e distinta para o som da banda.
-          </Typography>
-        </Content>
+      {membros.map((membro) => (
+        <Content >
+        <ImageContainer>
+          <StyledImage src={membro.imagePath} width={200} height={200}/>
+        </ImageContainer>
+        <Typography fontFamily={"century-gothic"}  variant="h5" component="h5" textAlign={"center"}  style={{marginBottom: 0}}>
+          {membro.name}
+        </Typography>
+        <Typography fontFamily={"century-gothic"}  variant="subtitle1" component="h6"  textAlign={"center"} style={{marginBottom: 2}}>
+          {membro.instrument}
+        </Typography>
+        <Divider/>
+        <Typography fontFamily={"century-gothic"}  variant="body1" component="p" textAlign={"center"}>
+          {membro.frase}
+        </Typography>
+      </Content>
+      ))}
 
     </Carousel>
 

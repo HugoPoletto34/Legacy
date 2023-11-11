@@ -27,13 +27,8 @@ function createData(
 }
 
 const rows = [
-  createData('IASD PETROVALE Betim ', '06/08', 'Manhã'),
-  createData('IASD São Benedito', '27/08', 'Manhã'),
-  createData('Acampamento dos Jovens', '10/09', 'Manhã'),
-  createData('IASD Pedro Leopoldo', '08/10', 'Manhã'),
-  createData('Teatro Francisco Nunes', '10/12', 'Noite - 19h'),
-  createData('IASD Menezes', '17/12', 'Noite - 19h'),
-  
+  createData('IASD São Benedito ', '11/11', 'Manhã'),
+  createData('IASD São José da Lapa', '09/12', 'Manhã'),  
 ];
 // 15/10 sab tarde (16 horas) - Ensaio Cantata de Natal
 

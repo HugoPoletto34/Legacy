@@ -41,8 +41,12 @@ export default function NavBar({ colorNav }) {
 
   const pages = [
     {label: 'SOBRE', href: '#about_page'}, 
+    {label: 'CAMPANHA', href: '#campanha_page'}, 
     {label: 'DISCOGRAFIA', href: '#videos_page'}, 
+    {label: 'MEMBROS', href: '#membros_page'}, 
     {label: 'AGENDA', href: '#cronograma_page'}, 
+    {label: 'FOTOS', href: '#photos_page'}, 
+    {label: 'CONTATO', href: '#contato_page'}, 
   ];
 
   return (

@@ -8,6 +8,10 @@ function MyApp({ Component, pageProps }: AppProps) {
     <Layout>
       <Head>
         <link rel="stylesheet" href="https://use.typekit.net/oov2wcw.css" />
+        {/* mudar favicon */}
+        <link rel="shortcut icon" href="/favicon.png" />
+        {/* mudar titulo da aba */}
+        <title>Legacy Instrumental</title>
       </Head>
       <Component {...pageProps} />
     </Layout>
